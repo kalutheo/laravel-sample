@@ -3,7 +3,7 @@ site:
   ports :
    - "80:80"
   volumes:
-   - /Users/theophile/Documents/workspace/perso/laravel-test/laravel-api-sample/app/:/var/www/html/
+   - /Users/theophile/Documents/workspace/perso/laravel-test/laravel-sample/app/:/var/www/html/
   links:
    - database
 phpmyadmin:

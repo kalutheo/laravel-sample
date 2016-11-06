@@ -4,8 +4,11 @@ COPY src/ /var/www/html/
 COPY config/php.ini /usr/local/etc/php/
 
 # Install PDO MySQL driver
-# See https://github.com/docker-library/php/issues/62
-RUN docker-php-ext-install pdo mysqli
+RUN docker-php-ext-install \
+    mbstring \
+    pdo \
+    pdo_mysql \
+    mysqli
 
 RUN a2enmod rewrite
 COPY 010-default.conf /etc/apache2/sites-available

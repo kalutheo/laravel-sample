@@ -36,6 +36,9 @@ ONBUILD RUN composer self-update \
 
 ONBUILD RUN composer install
 
+RUN usermod -u 1000 www-data
+
+
 WORKDIR /var/www/html
 
 

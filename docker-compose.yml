@@ -1,9 +1,11 @@
 site:
+  env_file:
+    - .env
   build: site
   ports :
    - "80:80"
   volumes:
-   - /Users/theophile/Documents/workspace/perso/laravel-test/laravel-sample/app/:/var/www/html/
+   - "${SITE_PATH}/:/var/www/html/"
   links:
    - database
 phpmyadmin:

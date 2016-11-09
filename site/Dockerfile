@@ -1,8 +1,5 @@
 FROM php:7.1-apache
 
-COPY src/ /var/www/html/
-COPY config/php.ini /usr/local/etc/php/
-
 # Install PDO MySQL driver
 RUN docker-php-ext-install \
     mbstring \
@@ -23,6 +20,9 @@ RUN apt-get update -y && \
     apt-get remove --purge curl -y && \
     apt-get clean
 
+RUN apt-get update && apt-get install -y \
+  git
+
 
 RUN chown -R www-data:www-data /var/www/html
 ONBUILD RUN composer self-update \
@@ -35,6 +35,7 @@ ONBUILD RUN composer self-update \
         --prefer-dist
 
 ONBUILD RUN composer install
+ONBUILD RUN php artisan key:generate
 
 RUN usermod -u 1000 www-data
 

@@ -37,7 +37,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user =  new User($request->get());
+        return $user;
     }
 
     /**

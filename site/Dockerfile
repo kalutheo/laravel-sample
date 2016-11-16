@@ -37,6 +37,9 @@ ONBUILD RUN composer self-update \
 ONBUILD RUN composer install
 ONBUILD RUN php artisan key:generate
 
+RUN usermod -u 1000 www-data
+
+
 WORKDIR /var/www/html
 
 

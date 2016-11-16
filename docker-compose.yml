@@ -6,8 +6,7 @@ site:
    - "80:80"
   volumes:
    - "${SITE_PATH}/:/var/www/html/"
-  links:
-   - database
+
 phpmyadmin:
    image: corbinu/docker-phpmyadmin
    ports :

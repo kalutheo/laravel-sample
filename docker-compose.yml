@@ -2,12 +2,11 @@ site:
   env_file:
     - .env
   build: site
-  command: chmod -R 777 storage vendor
   ports :
    - "80:80"
   volumes:
    - "${SITE_PATH}/:/var/www/html/"
-   
+
 phpmyadmin:
    image: corbinu/docker-phpmyadmin
    ports :

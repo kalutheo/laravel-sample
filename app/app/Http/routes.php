@@ -20,8 +20,8 @@ Route::get('/infos', function () {
     exit;
 });
 
+//AUTH
 Route::auth();
-
 Route::get('/home', 'HomeController@index');
 
 
@@ -30,9 +30,14 @@ Route::get('/home', 'HomeController@index');
 ## API
 
 Route::group(['prefix' => 'api/v1'], function () {
-    Route::resource('users', 'UserController');
+
+    Route::group(['middleware'=>'jwt.auth'], function() {
+        Route::resource('users', 'UserController');
+    });
 
     Route::get('/session/token', 'SessionController@getToken');
+    Route::post('/session/authenticate', 'SessionController@authenticate');
+
 
 });
 

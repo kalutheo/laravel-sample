@@ -23,3 +23,16 @@ Route::get('/infos', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+
+## API
+
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::resource('users', 'UserController');
+
+    Route::get('/session/token', 'SessionController@getToken');
+
+});
+

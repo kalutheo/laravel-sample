@@ -24,6 +24,10 @@ RUN apt-get update && apt-get install -y \
   git
 
 
+RUN usermod -u 1000 www-data
+
+
+
 RUN chown -R www-data:www-data /var/www/html
 ONBUILD RUN composer self-update \
         && cd /var/www/html \
@@ -37,14 +41,7 @@ ONBUILD RUN composer self-update \
 ONBUILD RUN composer install
 ONBUILD RUN php artisan key:generate
 
-RUN usermod -u 1000 www-data
-
 
 WORKDIR /var/www/html
 
-
-# Workaround for write permission on write to MacOS X volumes
-# See https://github.com/boot2docker/boot2docker/pull/534
-#RUN usermod -u 1000 www-data
-# Enable Apache mod_rewrite
-#RUN a2enmod rewrite
+ONBUILD RUN chmod 777 -R /var/www/html/storage

@@ -62,6 +62,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        User::created(function ($user) {
+            event(new \App\Events\UserWasRegistered($user));
+        });
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

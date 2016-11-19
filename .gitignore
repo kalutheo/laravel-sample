@@ -1,2 +1,4 @@
 .idea
 .env
+app/public/js/app.js
+app/public/css/app.css

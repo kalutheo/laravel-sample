@@ -17,7 +17,7 @@ class UserWasRegistered implements ShouldBroadcast
     /**
      * @var User
      */
-    private $user;
+    public $user;
 
     /**
      * Create a new event instance.
@@ -36,6 +36,7 @@ class UserWasRegistered implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('users');
+        return new Channel('users');
     }
+    
 }

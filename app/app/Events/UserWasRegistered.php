@@ -38,5 +38,5 @@ class UserWasRegistered implements ShouldBroadcast
     {
         return new Channel('users');
     }
-    
+
 }

@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <example></example>
+        <registered-users></registered-users>
     </div>
 </div>
 @endsection

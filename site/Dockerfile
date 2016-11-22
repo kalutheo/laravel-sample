@@ -24,6 +24,10 @@ RUN apt-get update && apt-get install -y \
   git
 
 
+RUN apt-get update && apt-get install -y \
+  zip unzip
+
+
 RUN usermod -u 1000 www-data
 
 

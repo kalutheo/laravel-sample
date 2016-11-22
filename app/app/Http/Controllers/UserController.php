@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 
+/**
+ * @resource User
+ */
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Get all Users
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,8 +23,7 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
+     * @hideFromAPIDocumentation
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -30,8 +32,8 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
+     * Create User
+     * @hideFromAPIDocumentation
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -42,7 +44,7 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Get specific User
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -54,7 +56,7 @@ class UserController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
+     * @hideFromAPIDocumentation
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -65,7 +67,7 @@ class UserController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
+     * @hideFromAPIDocumentation
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -77,7 +79,7 @@ class UserController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
+     * @hideFromAPIDocumentation
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

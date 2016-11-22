@@ -24,12 +24,3 @@ Route::group(['middleware'=>'jwt.auth'], function() {
 
 Route::get('/session/token', 'SessionController@getToken');
 Route::post('/session/authenticate', 'SessionController@authenticate');
-
-
-
-## API
-
-Route::group(['prefix' => 'api/v1'], function () {
-
-
-});

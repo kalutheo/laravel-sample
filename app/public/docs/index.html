@@ -330,6 +330,74 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/users/{user}</code></p>
 <p><code>HEAD api/users/{user}</code></p>
 <!-- END_8f99b42746e451f8dc43742e118cb47b -->
+<h1>Car</h1>
+<!-- START_0c2d0c07b345a4735865c3a32941897b -->
+<h2>Get specific Car</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl "http://localhost/api/cars/{car}" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/cars/{car}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "user_id": 26,
+    "description": "Quia odit eius veritatis a at repellat deleniti. Quo ut unde nobis. Laboriosam eum qui architecto recusandae.",
+    "model": "optio",
+    "manufacturer": "molestiae",
+    "created_at": "2016-11-22 21:40:03",
+    "updated_at": "2016-11-22 21:40:03",
+    "user": {
+        "id": 26,
+        "name": "Alexane Tromp",
+        "email": "hilpert.rogelio@example.org",
+        "created_at": "2016-11-22 21:40:03",
+        "updated_at": "2016-11-22 21:40:03"
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/cars/{car}</code></p>
+<p><code>HEAD api/cars/{car}</code></p>
+<!-- END_0c2d0c07b345a4735865c3a32941897b -->
+<!-- START_48af790ae82208c5701318e46fb1fb10 -->
+<h2>Update specific Car</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl "http://localhost/api/cars/{car}" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/cars/{car}",
+    "method": "PUT",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/cars/{car}</code></p>
+<p><code>PATCH api/cars/{car}</code></p>
+<!-- END_48af790ae82208c5701318e46fb1fb10 -->
 <h1>Session</h1>
 <!-- START_25f6a051eecd0d8ef44c7c46480d61d0 -->
 <h2>Authentification</h2>

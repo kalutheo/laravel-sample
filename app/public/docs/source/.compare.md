@@ -323,6 +323,95 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_8f99b42746e451f8dc43742e118cb47b -->
+#Car
+<!-- START_0c2d0c07b345a4735865c3a32941897b -->
+## Get specific Car
+
+> Example request:
+
+```bash
+curl "http://localhost/api/cars/{car}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/cars/{car}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "id": 1,
+    "user_id": 26,
+    "description": "Quia odit eius veritatis a at repellat deleniti. Quo ut unde nobis. Laboriosam eum qui architecto recusandae.",
+    "model": "optio",
+    "manufacturer": "molestiae",
+    "created_at": "2016-11-22 21:40:03",
+    "updated_at": "2016-11-22 21:40:03",
+    "user": {
+        "id": 26,
+        "name": "Alexane Tromp",
+        "email": "hilpert.rogelio@example.org",
+        "created_at": "2016-11-22 21:40:03",
+        "updated_at": "2016-11-22 21:40:03"
+    }
+}
+```
+
+### HTTP Request
+`GET api/cars/{car}`
+
+`HEAD api/cars/{car}`
+
+
+<!-- END_0c2d0c07b345a4735865c3a32941897b -->
+<!-- START_48af790ae82208c5701318e46fb1fb10 -->
+## Update specific Car
+
+> Example request:
+
+```bash
+curl "http://localhost/api/cars/{car}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/cars/{car}",
+    "method": "PUT",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`PUT api/cars/{car}`
+
+`PATCH api/cars/{car}`
+
+
+<!-- END_48af790ae82208c5701318e46fb1fb10 -->
 #Session
 <!-- START_25f6a051eecd0d8ef44c7c46480d61d0 -->
 ## Authentification

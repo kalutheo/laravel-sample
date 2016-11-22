@@ -20,6 +20,7 @@ Route::get('/user', function (Request $request) {
 
 Route::group(['middleware'=>'jwt.auth'], function() {
     Route::resource('users', 'UserController');
+    Route::resource('cars', 'CarController');
 });
 
 Route::get('/session/token', 'SessionController@getToken');

@@ -178,7 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         \Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
-        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class
 
     ],
 

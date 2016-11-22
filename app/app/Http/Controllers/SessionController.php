@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\Session;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
+/**
+ * @resource Session
+ */
 class SessionController extends Controller
 {
 
 
     /**
+     * Authentification
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
@@ -38,8 +42,7 @@ class SessionController extends Controller
 
 
     /**
-     * Display a listing of the resource.
-     *
+     * Get Token
      * @return \Illuminate\Http\Response
      */
     public function getToken()

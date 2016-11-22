@@ -21,7 +21,7 @@ class SessionController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function authenticate(Request $request)
+    public function authenticate(Requests\Auth $request)
     {
         // grab credentials from the request
         $credentials = $request->only('email', 'password');
@@ -43,6 +43,7 @@ class SessionController extends Controller
 
     /**
      * Get Token
+     * @hideFromAPIDocumentation
      * @return \Illuminate\Http\Response
      */
     public function getToken()

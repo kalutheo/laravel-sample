@@ -8,8 +8,7 @@ use App\User;
 class UserApiTest extends TestCase
 {
 
-    use DatabaseMigrations;
-
+    use DatabaseTransactions;
 
     /**
      * Test users listing
@@ -18,7 +17,7 @@ class UserApiTest extends TestCase
      */
     public function testTokenNotProvided()
     {
-        $this->get('/api/v1/users', [])
+        $this->get('/api/users', [])
             ->seeJson([
                 'error' => 'token_not_provided',
             ]);
@@ -31,8 +30,8 @@ class UserApiTest extends TestCase
         $user = factory(App\User::class)->create();
         $this
                   ->actingAs($user)
-                  ->get('/api/v1/users')
-                  ->seeJson([$user->toArray()]);
+                  ->get('/api/users')
+                  ->seeJson(User::all()->toArray());
 
     }
 }

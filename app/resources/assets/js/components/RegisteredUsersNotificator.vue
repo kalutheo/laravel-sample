@@ -25,7 +25,7 @@
         broadcaster: 'pusher',
         cluster: 'eu',
         encrypted: true,
-        key: 'c5ef47d86332e355b128'
+        key: Laravel.pusherKey
     });
 
     export default {

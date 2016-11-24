@@ -1,1 +1,0 @@
-php artisan api:gen --routePrefix="api/*" --bindings=user,4

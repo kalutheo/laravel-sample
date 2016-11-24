@@ -13,6 +13,7 @@
             </div>
         </div>
         <registered-users></registered-users>
+        <search-car-widget></search-car-widget>
     </div>
 </div>
 @endsection

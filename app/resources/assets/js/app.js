@@ -14,6 +14,7 @@ require('./bootstrap');
  */
 
 Vue.component('registered-users', require('./components/RegisteredUsersNotificator.vue'));
+Vue.component('search-car-widget', require('./components/SearchCarWidget.vue'));
 
 const app = new Vue({
     el: '#app'

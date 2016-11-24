@@ -15,9 +15,12 @@
 
     <!-- Scripts -->
     <script>
-        window.Laravel = <?php echo json_encode([
+        window.Laravel = <?php
+            echo json_encode([
             'csrfToken' => csrf_token(),
-            'pusherKey' =>  env('PUSHER_KEY')
+            'pusherKey' =>  env('PUSHER_KEY'),
+            'algoliaSearchKey' => env('ALGOLIA_SEARCH_KEY'),
+            'algoliaAppId' => env('ALGOLIA_APP_ID')
         ]); ?>
     </script>
 </head>
